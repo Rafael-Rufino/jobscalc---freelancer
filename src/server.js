@@ -8,7 +8,8 @@ server.set('view engine', 'ejs')
 
 //habilitar arquivos static (middewares)
 server.use(express.static("public"))
-
+// enviando os dados
+server.use(express.urlencoded({extended: true}))
 // routes
 server.use(routes)
 
