@@ -1,7 +1,10 @@
 const express = require("express")
 const server = express()
-// importando as rotas
 const routes = require("./routes")
+const path = require("path")
+
+// mudar a localização da pasta views
+server.set('views', path.join(__dirname, 'views'))
 
 // usando template engine
 server.set('view engine', 'ejs')
